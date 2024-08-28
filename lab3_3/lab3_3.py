@@ -1,21 +1,15 @@
 print("Введіть речення:")
 string = input()
-word = ""
-words = []
-punctuation = " ,.!?:-"
 
-for i in range(len(string)):
-    if string[i] not in punctuation:
-        word += string[i]
-    else:
-        if word:
-            if word in words:
-                print("Слово, що повторюється два рази:",word)
-                exit(0)
-            words.append(word)
-            word = ""
+punctuation = ".,!?"
+for char in punctuation:
+    string = string.replace(char, '')
 
-if word and word in words:
-    print("Слово, що повторюється два рази:",word)
-else:
-    print("Не виявлено повторів слів")
+words = string.split()
+
+for word in words:
+    if words.count(word) > 1:
+        print("Слово, що повторюється два рази:",word)
+        exit(0)
+
+print("Не виявлено повторів слів")
