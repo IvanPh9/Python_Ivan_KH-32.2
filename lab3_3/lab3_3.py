@@ -1,7 +1,7 @@
 print("Введіть речення:")
 string = input()
 
-punctuation = ".,!?"
+punctuation = ".,!?-:;"
 for char in punctuation:
     string = string.replace(char, '')
 
