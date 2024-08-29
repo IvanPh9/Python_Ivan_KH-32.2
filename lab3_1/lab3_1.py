@@ -5,5 +5,4 @@ while not string.isalpha() or " " in string or len(string) < 3:
     string = input("Спробуйте ще раз: ")
 
 string_1 = string[2::3]
-
 print("Кожна третя буква слова:", string_1)
