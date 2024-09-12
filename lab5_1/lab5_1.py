@@ -1,5 +1,5 @@
 n = int(input("n = "))
-if n < 2:
+while n < 2:
     n = int(input("Введіть n > 1 = "))
 print(f"Введіть {n} елементів масиву(списку):")
 
