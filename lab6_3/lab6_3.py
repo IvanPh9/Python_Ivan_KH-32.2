@@ -4,7 +4,7 @@ def search():
     print("Текст:", B)
 
     g_count = sum(B.count(char) for char in set(B) & set('aeiouy'))
-    p_count = sum(B.count(char) for char in set(B) & set('bcdfghjklmnpqrstvwxyz'))
+    p_count = sum(B.count(char) for char in set(B) & set('bcdfghjklmnpqrstvwxz'))
 
     print(f"Кількість голосних: {g_count}")
     print(f"Кількість приголосних: {p_count}")
