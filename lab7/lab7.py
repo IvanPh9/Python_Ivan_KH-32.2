@@ -1,9 +1,9 @@
-def Print(countries):
+def Print(countries): #Друк словника
     for country, data in countries.items():
         string = f"Country {country}: Population {data['population']} million; Area {data['area']} thousand km²"
         print(string)
 
-def Del(countries, key):
+def Del(countries, key): #Видалення за ключем
     if key in countries:
         del countries[key]
         string = f"Deleted {key}."
@@ -11,12 +11,12 @@ def Del(countries, key):
         string = f"Key '{key}' not found."
     print(string)
 
-def New(countries, key, population, area):
+def New(countries, key, population, area): #Додавання нового елементу списку
     countries[key] = {"population": population, "area": area}
     string = f"Added {key}: Population {population} million; Area {area} thousand km²"
     print(string)
 
-def Sort(countries):
+def Sort(countries): #Сортування по ключу
     countries = {k: countries[k] for k in sorted(countries)}
     print("Sorted successfully")
     Print(countries)
@@ -45,7 +45,7 @@ countries = {
     "Portugal": {"population": 10.3, "area": 92.2}
 }
 n = True
-while (n):
+while (n): #Запит користувачу для виконання дій зі словником
     print("\nAvailable actions:")
     print("1: Print all countries")
     print("2: Add a new country")
