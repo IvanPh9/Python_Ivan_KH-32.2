@@ -4,8 +4,11 @@ def Print(countries):
         print(string)
 
 def Del(countries, key):
-    del countries[key]
-    string = f"Deleted {key}."
+    if key in countries:
+        del countries[key]
+        string = f"Deleted {key}."
+    else:
+        string = f"Key '{key}' not found."
     print(string)
 
 def New(countries, key, population, area):
