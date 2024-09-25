@@ -12,8 +12,11 @@ def Del(countries, key): #Видалення за ключем
     print(string)
 
 def New(countries, key, population, area): #Додавання нового елементу списку
-    countries[key] = {"population": population, "area": area}
-    string = f"Added {key}: Population {population} million; Area {area} thousand km²"
+    if key in countries:
+        string = f"Key '{key}' is already exists."
+    else:
+        countries[key] = {"population": population, "area": area}
+        string = f"Added {key}: Population {population} million; Area {area} thousand km²"
     print(string)
 
 def Sort(countries): #Сортування по ключу
