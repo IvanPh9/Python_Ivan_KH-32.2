@@ -27,12 +27,12 @@ file_2_w = Open(file2_name, "w")
 if file_1_w:
     file_1_w.write("8dH7kLmQ2z4XyN9aW5pT1vB3fG6cJ0sZrV8uE7qL2dS9oP1kM3tF4wX5jC6nR0gV7hY9i")
     print(f"Information was succesfully added to {file1_name}")
-    file_1_w.close();
+    file_1_w.close()
     print(f"File {file1_name} was closed!")
 if file_2_w:
     file_2_w.write("f3D5lP9zX7aK4vT1yB2qW6mN0rV8uJ3sC1hG7oL5xZ4nP2iR8wF6kY9tM0cS9jE7dH1g")
     print(f"Information was succesfully added to {file2_name}")
-    file_2_w.close();
+    file_2_w.close()
     print(f"File {file2_name} was closed!")
 # Першочергово відкриваємо файли для читання і тимчасовий файл
 file_1_r = Open(file1_name, "r")
