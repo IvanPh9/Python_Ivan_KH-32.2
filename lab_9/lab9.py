@@ -8,7 +8,7 @@ def Open(file_name, mode):
     else:
         print("File", file_name, "was opened!")
         return file
-
+# Функція друку файлів по рядках
 def Print(file_name):
     file_r = Open(file_name, "r")
     if file_r != None:
