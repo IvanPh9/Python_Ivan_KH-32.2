@@ -1,10 +1,10 @@
 import json
-def Print(countries): #Друк словника
+def Print(countries): #Друк файлу
     for country, data in countries.items():
         string = f"Country {country}: Population {data['population']} million; Area {data['area']} thousand km²"
         print(string)
 
-def update_json(countries, name):
+def update_json(countries, name): #Оновлення файлу
     with open(name, "w") as file:
         json.dump(countries, file, indent=4)
 
@@ -27,7 +27,7 @@ def New(countries, key, population, area): #Додавання нового ел
     update_json(countries, 'data.json')
 
 def Find(countries, key): #Пошук по ключу
-    data = countries.get(key)  # Використовуємо .get() для безпечного доступу
+    data = countries.get(key)
     if data:
         print(f"Country {key}: Population {data['population']} million; Area {data['area']} thousand km²")
     else:
